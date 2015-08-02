@@ -1,0 +1,20 @@
+{
+  "name": "es6-base",
+  "version": "0.0.1",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "start": "npm run browser-sync & watchify -o js/bundle.js -v -d js/index.js",
+    "browser-sync": "browser-sync start --server --files='js/bundle.js, index.html, css/style.css'"
+  },
+  "devDependencies": {
+    "babelify": "*",
+    "browser-sync": "*",
+    "watchify": "*"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  }
+}
